@@ -1,35 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title>td-candidate-test</title>
-
-		<!-- Library styles -->
-		<link rel="stylesheet" href="libraries/bootstrap/dist/css/bootstrap.css"/>
-
-		<!-- Component styles -->
-		<!-- build:css all.min.css -->
-		<link rel="stylesheet" href=".tmp/all.css"/>
-		<!-- endbuild -->
-	</head>
-	<body role="document">
-		<div class="container">
-			<div class="starter-template" style="padding: 40px 15px; text-align: center;">
-				<h1>Starter Template</h1>
-				<p class="lead">Replace this <code>.starter-template</code> div with your new custom component.</p>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>td-candidate-test</title>
+	<!-- Library styles -->
+	<link rel="stylesheet" href="libraries/bootstrap/dist/css/bootstrap.css"/>
+	<!-- Latest compiled and minified CSS -->
+	<!-- Component styles -->
+	<!-- build:css all.min.css -->
+	<link rel="stylesheet" href=".tmp/all.css"/>
+	<!-- endbuild -->
+</head>
+<body role="document">
+	<div class="container-fluid">
+		<div class="row" >
+			<div class="col-md-2" id="top_nav"> 
+				<img class="circular" src="Images/rontamir.jpg" id="ron">
+				Ron Tamir
 			</div>
+			<div class="col-md-10"> 
+				Inbox
+			</div>
+		</div>	<!--End row-->
+		<!--side-nav-->
+		<div class="row" >
+			<div class="col-md-2"> 
+				<button type="button" id="new_email" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"> New Email</span></button>
+				<ul class="nav nav-pills nav-stacked" >
+					<li><a href="#">Inbox</a></li>
+					<li><a href="#">Sent</a></li>
+					<li><a href="#">Flagged</a></li>
+					<li><a href="#">Deleted</a></li> 
+				</ul>
+			</li>
 		</div>
-
-
+		<!--end side-nav-->
+		<div class="col-md-5"> 
+			<div class="panel panel-default">
+				<div class="panel-heading" pull-left clearfix ><img class="circular" src="Images/NickDaanen.jpg" id="nick">
+				 <h3 class="panel-title">Nick Daanen<br>
+					<a href="mailto:NickDaanen@test.com">Nickdaanen@test.com</a>
+					<div class="pull-right" >
+						09/18/2015
+						<br>
+						<button type="button" class="btn btn-success">Internal
+					</div>
+				</h3>
+			</div>
+					<div class="panel-body">
+						Hello!
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt odio vel nulla dignissim, ac rutrum magna dictum. Morbi tellus quam, porttitor at rhoncus vel, pretium ut est. Ut accumsan dolor nibh, vel eleifend diam convallis at. Vestibulum et tristique mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin in neque lectus. Proin efficitur felis ac egestas accumsan. Phasellus varius, sapien blandit porttitor laoreet, leo quam imperdiet lacus, eget suscipit tellus mauris nec augue. Sed vehicula sapien enim, sed malesuada mi lacinia ut. Donec commodo ut velit quis pretium.
+						<br>
+						<button type="button" style="float:right;" id="reply" onclick="showDiv()" class="btn btn-default"><span class="glyphicon glyphicon-share-alt">   Reply</button>
+					</div>
+				</div>
+					<div class="panel-body" style="display:none;" id="area">
+						<img class="circular" src="Images/rontamir.jpg" id="ron">
+						<textarea style="width:60%; height: 150px;" placeholder="Reply"></textarea>
+						<button type="button" style="float:right;" id="send" data-toggle="modal" data-target="#myModal" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right">   Send</button>
+						<!--Prograss bar-->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Sending....</h4>
+									</div>
+									<div class="modal-body">
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+												<span class="sr-only"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--end modal prograss bar-->
+						<!-- Modal for message sent -->
+						<div class="modal fade" id="myModal_sent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-body">
+										<div class='ok'><span  class="glyphicon glyphicon-ok"></span></div>
+										<p>
+											Message Sent
+										</p>
+										<p>
+											Some Details.dipiscing elit. Proin tincidunt odio vel nulla dignissim, ac rutrum magna dictum.
+										</p>
+										<button type="button" id="done" data-toggle="modal" data-target="#myModal" onClick="history.go(0)" class="btn btn-primary">Done</button>
+									</div>
+								</div>
+							</div>
+						</div><!-- End Modal for message sent -->
+					</div><!--End panel-->
+				</div>
+			</div><!--End row-->
+			<!--End container-->
+		</div>
 		<!-- Library scripts -->
 		<script src="libraries/jquery/dist/jquery.js"></script>
 		<script src="libraries/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
 
 		<!-- Component scripts -->
 		<!-- build:js all.min.js -->
 		<script src="scripts.js"></script>
 		<!-- endbuild -->
 	</body>
-</html>
+	</html>

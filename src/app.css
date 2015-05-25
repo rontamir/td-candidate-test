@@ -1,0 +1,39 @@
+
+.circular {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	  vertical-align: top;
+
+	}
+.col-md-3 {margin-top:5%;float:left;height:500px; width:25%;}
+.col-md-5 {margin-top:5%;float:center;}
+.divider-vertical {
+  height: 100%;
+  width:3px;
+  display:block; /* for use on default inline elements like span */
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  float:right;
+}
+.divider {
+  height: 1px;
+  width:100%;s
+  background-color: #e5e5e5;
+}
+.panel-default{
+	width:1000px;
+	box-shadow: 0 0 2px black;
+}
+
+.btn-default:hover{
+    background: #3399FF;
+    color:white;
+}
+
+.progress-bar.animate {
+   width: 100%;
+}
