@@ -1,39 +1,20 @@
-
-.circular {
-	width: 50px;
-	height: 50px;
-	border-radius: 25px;
-	-webkit-border-radius: 25px;
-	-moz-border-radius: 25px;
-	  vertical-align: top;
-
-	}
-.col-md-3 {margin-top:5%;float:left;height:500px; width:25%;}
-.col-md-5 {margin-top:5%;float:center;}
-.divider-vertical {
-  height: 100%;
-  width:3px;
-  display:block; /* for use on default inline elements like span */
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #e5e5e5;
-  float:right;
-}
-.divider {
-  height: 1px;
-  width:100%;s
-  background-color: #e5e5e5;
-}
-.panel-default{
-	width:1000px;
-	box-shadow: 0 0 2px black;
-}
-
-.btn-default:hover{
-    background: #3399FF;
-    color:white;
-}
-
-.progress-bar.animate {
-   width: 100%;
-}
+.circular {width: 50px;height: 50px;border-radius: 25px;-webkit-border-radius: 25px;-moz-border-radius: 25px;vertical-align: top;}
+.ok{width: 125px;height: 125px;border-radius: 62px;background:#58B957;-webkit-border-radius: 62px;-moz-border-radius: 62px;vertical-align: top;color: white;text-align:center;   font-size: 50px; margin:auto;}
+.glyphicon-ok{font-size: 62px;display: block;text-align: center;margin:auto;line-height: 125px;}
+.col-md-2 {height:100%; margin-top: 2%;}
+#top_nav{background-color: #000000;font-size: 25px; color: white;height:6%;border-right: 3px solid #E4E4E8 ;margin-top: 0px;}
+.col-md-5 {height:100%;border-left: 3px solid #E4E4E8 ;margin-top: 2%;}
+.col-md-10 {background-color: #000000;height: 50px;width: 83%;font-size: 25px;color: white;}
+#done{margin: auto;}
+.btn-default:hover{background: #3399FF;color:white;text-align: center;font-size: 1.2em;}
+.btn-primary{margin-left: 25%;}
+.btn-success{line-height: 5px;height:25px;font-size: 0.8em;vertical-align: middle;}
+.done{font-size: 20px;}
+.progress {width:0%;-webkit-animation: mymove 5s;-moz-animation: mymove 5s;-ms-animation: mymove 5s ;-o-animation: mymove 5s ;}
+@-webkit-keyframes mymove {100% {width: 575px;}}
+@-moz-keyframes mymove {100% {width: 575px;}}
+@-ms-keyframes mymove {100% {width: 575px;}}
+@-o-keyframes mymove {100% {width: 575px;}}
+.panel-default > .panel-heading {color: #333;background-color: white;border-color: white;}
+.modal {width: 35%;text-align: center;margin:auto;}
+.modal-body{border-bottom: none;}
